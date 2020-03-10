@@ -63,7 +63,7 @@ outEmailHtmlTable = sb.ToString();
 
 It is better to have a visual. If yes have a look at below mentioned Video
 
-https://youtu.be/KRdeok5ypXE
+<iframe width="420" height="315" src="https://youtu.be/KRdeok5ypXE" frameborder="0" allowfullscreen></iframe>
 
 Adding color to first row with code.
 
