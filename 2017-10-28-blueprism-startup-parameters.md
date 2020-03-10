@@ -20,4 +20,4 @@ So, after running the process the data will transfer to the second page through 
 
 For more details .... please watch the below video..
 
-<iframe width="420" height="315" src="https://youtu.be/iuxnvCtajxY" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id="iuxnvCtajxY" %}
