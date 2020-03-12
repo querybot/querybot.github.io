@@ -2,7 +2,7 @@
 layout: post
 title: BluePrism Code stage Prime number Validation
 date: 2017-10-25 14:25
-author: querybotadmin
+author: Query Bot
 comments: true
 categories: [BluePrism, Code Stage]
 ---

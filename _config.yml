@@ -1,1 +1,15 @@
-remote_theme: pmarsceill/just-the-docs
+title: Query Bot 
+email: querybot.net@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Query Bot RPA.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://querybot.net" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:categories/:title/
+plainwhite:
+  name: Query Bot
+  tagline: A Simple RPA Blog
+  date_format: "%b %-d, %Y"
+  analytics_id: UA-155112982-1
+  disqus_shortname: querybot
+
+remote_theme: thelehhman/plainwhite-jekyll

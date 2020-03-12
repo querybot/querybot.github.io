@@ -2,7 +2,7 @@
 layout: post
 title: Create Dynamic Nested Folders with Blue Prism
 date: 2018-01-15 16:33
-author: querybotadmin
+author: Query Bot
 comments: true
 categories: [BluePrism, Code Stage]
 ---

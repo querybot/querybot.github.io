@@ -2,7 +2,7 @@
 layout: post
 title: Blue Prism Code Stage Example
 date: 2017-09-22 10:22
-author: querybotadmin
+author: Query Bot
 comments: true
 categories: [BluePrism, Code Stage]
 ---

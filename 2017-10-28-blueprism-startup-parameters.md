@@ -2,7 +2,7 @@
 layout: post
 title: Blueprism Startup Parameters
 date: 2017-10-28 14:07
-author: querybotadmin
+author: Query Bot
 comments: true
 categories: [Buee Prism Startup Parameters]
 ---

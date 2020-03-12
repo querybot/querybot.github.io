@@ -2,7 +2,7 @@
 layout: post
 title: Send Email with Custom Table Data with Blue Prism
 date: 2018-01-06 18:12
-author: querybotadmin
+author: Query Bot
 comments: true
 categories: [BluePrism, Code Stage]
 ---
