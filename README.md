@@ -1,5 +1,3 @@
-## Query Bot 
-
 <ul>
   {% for post in site.posts %}
     <li>

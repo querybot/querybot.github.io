@@ -12,4 +12,9 @@ plainwhite:
   analytics_id: UA-155112982-1
   disqus_shortname: querybot
 
+markdown: kramdown
 remote_theme: thelehhman/plainwhite-jekyll
+show_excerpts: true
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
