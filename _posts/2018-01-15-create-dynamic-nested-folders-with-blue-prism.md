@@ -8,8 +8,10 @@ categories: [BluePrism, Code Stage]
 ---
 Create dynamic Nested folders using Blue Prism tool. This blog post explains about creation of nested folders using c# as well as VB code. 
 C# Code
-<pre>
-var levelsList = inCollection.AsEnumerable().Select(dItem => new { Level = Convert.ToInt32(dItem["Level"]) }).ToList();
+```
+var levelsList = inCollection.AsEnumerable().Select(dItem => new { 
+  Level = Convert.ToInt32(dItem["Level"]) 
+}).ToList();
 
 var maxDepth = levelsList.Max(depth => depth.Level);
 
@@ -38,15 +40,15 @@ foreach(DataRow item in maxDepthItems)
      Directory.CreateDirectory(totalPath);
    }
 }
-</pre>
+```
 Code for Dynamic Nested Folder Creation with Blue Prism
 
 VB.net Code
-<pre>
+```
 Dim levelsList = inCollection.AsEnumerable().Select(
 Function(Item, Index) New With
 {
-.Level = Convert.ToInt32(Item("Level"))
+  .Level = Convert.ToInt32(Item("Level"))
 }).ToList()
 Dim maxDepth As Int32 = 0
 
@@ -56,7 +58,8 @@ For Each mxItem As Object In levelsList
     End If
 Next
 
-Dim maxDepthItems = inCollection.AsEnumerable().Where(Function(dItem) Convert.ToInt32(dItem("Level")) = maxDepth).ToList()
+Dim maxDepthItems = inCollection.AsEnumerable()
+    .Where(Function(dItem) Convert.ToInt32(dItem("Level")) = maxDepth).ToList()
 
 For Each item As DataRow In maxDepthItems
 Dim minDepthLevel As Int32 = Convert.ToInt32(item("Level"))
@@ -79,4 +82,4 @@ If Directory.Exists(totalPath) = False Then
 End If
 
 Next
-</pre>
+```
