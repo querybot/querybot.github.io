@@ -10,7 +10,6 @@ plainwhite:
   tagline: A Simple RPA Blog
   date_format: "%b %-d, %Y"
   analytics_id: UA-155112982-1
-  disqus_shortname: querybot
 
 markdown: kramdown
 remote_theme: thelehhman/plainwhite-jekyll
