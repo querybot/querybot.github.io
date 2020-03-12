@@ -27,7 +27,7 @@ Namespaces : System.Data, System.Collections.Generic, System.Text (Add these ite
 
 Once it is set, will jump to code.
 
-```csharp
+```
 StringBuilder sb = new StringBuilder();
 if(InData.Rows.Count > 0)
 {
@@ -69,7 +69,7 @@ Adding color to first row with code.
 
 Code for first column coloring with Yellow.
 
-```csharp
+```
 StringBuilder sb = new StringBuilder();
 if (InData.Rows.Count > 0)
 {

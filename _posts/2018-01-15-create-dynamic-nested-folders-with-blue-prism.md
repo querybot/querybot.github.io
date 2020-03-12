@@ -8,7 +8,7 @@ categories: [BluePrism, Code Stage]
 ---
 Create dynamic Nested folders using Blue Prism tool. This blog post explains about creation of nested folders using c# as well as VB code. 
 C# Code
-```csharp
+```
 var levelsList = inCollection.AsEnumerable().Select(dItem => new { 
   Level = Convert.ToInt32(dItem["Level"]) 
 }).ToList();
@@ -44,7 +44,7 @@ foreach(DataRow item in maxDepthItems)
 Code for Dynamic Nested Folder Creation with Blue Prism
 
 VB.net Code
-```vb
+```
 Dim levelsList = inCollection.AsEnumerable().Select(
 Function(Item, Index) New With
 {
