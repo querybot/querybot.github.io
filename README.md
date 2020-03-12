@@ -1,2 +1,2 @@
 # querybot.net
-Query Bot Blog.
+Query Bot RPA Blog.
