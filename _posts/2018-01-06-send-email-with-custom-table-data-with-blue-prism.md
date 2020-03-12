@@ -5,6 +5,7 @@ date: 2018-01-06 18:12
 author: Query Bot
 comments: true
 categories: [BluePrism, Code Stage]
+youtubeId: KRdeok5ypXE
 ---
 Hi Folks, Welcome back.
 
@@ -63,7 +64,7 @@ outEmailHtmlTable = sb.ToString();
 
 It is better to have a visual. If yes have a look at below mentioned Video
 
-<iframe width="420" height="315" src="https://youtu.be/KRdeok5ypXE" frameborder="0" allowfullscreen></iframe>
+{% include youtubePlayer.html id=page.youtubeId %}
 
 Adding color to first row with code.
 

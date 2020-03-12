@@ -5,6 +5,7 @@ date: 2017-10-28 14:07
 author: Query Bot
 comments: true
 categories: [Buee Prism Startup Parameters]
+youtubeId: iuxnvCtajxY
 ---
 Will see how start up parameters in blue prism. Start up parameters will use to transfer data from one page to another page or Process to object..
 
@@ -20,4 +21,4 @@ So, after running the process the data will transfer to the second page through 
 
 For more details .... please watch the below video..
 
-{% include youtube.html id="iuxnvCtajxY" %}
+{% include youtubePlayer.html id=page.youtubeId %}
