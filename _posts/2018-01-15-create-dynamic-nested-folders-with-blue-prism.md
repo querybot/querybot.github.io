@@ -6,32 +6,33 @@ author: Query Bot
 comments: true
 categories: [BluePrism, Code Stage]
 ---
+Create dynamic Nested folders using Blue Prism tool. This blog post explains about creation of nested folders using c# as well as VB code. 
 C# Code
 <pre>
-var levelsList = inCollection.AsEnumerable().Select(dItem =&amp;amp;amp;amp;amp;gt; new { Level = Convert.ToInt32(dItem[&quot;Level&quot;]) }).ToList();
+var levelsList = inCollection.AsEnumerable().Select(dItem => new { Level = Convert.ToInt32(dItem["Level"]) }).ToList();
 
-var maxDepth = levelsList.Max(depth =&amp;amp;amp;amp;amp;gt; depth.Level);
+var maxDepth = levelsList.Max(depth => depth.Level);
 
-var maxDepthItems = inCollection.AsEnumerable().Where(dItem =&amp;amp;amp;amp;amp;gt; Convert.ToInt32(dItem[&quot;Level&quot;]) == maxDepth).ToList();
+var maxDepthItems = inCollection.AsEnumerable().Where(dItem => Convert.ToInt32(dItem["Level"]) == maxDepth).ToList();
 
 foreach(DataRow item in maxDepthItems)
 {
-   var minDepthLevel = Convert.ToInt32(item[&quot;Level&quot;]);
-   var parentId = Convert.ToInt32(item[&quot;ParentId&quot;]);
-   string folderPath = item.Field&amp;amp;amp;amp;amp;lt;string&amp;amp;amp;amp;amp;gt;(&quot;Name&quot;);
+   var minDepthLevel = Convert.ToInt32(item["Level"]);
+   var parentId = Convert.ToInt32(item["ParentId"]);
+   string folderPath = item.Field<string>("Name");
 
   do
   {
-    var depthEachItem = inCollection.AsEnumerable().Where(dItem =&amp;amp;amp;amp;amp;amp;gt; Convert.ToInt32(dItem[&quot;ID&quot;]) == parentId).ToList().FirstOrDefault();
+    var depthEachItem = inCollection.AsEnumerable().Where(dItem => Convert.ToInt32(dItem["ID"]) == parentId).ToList().FirstOrDefault();
     if(depthEachItem != null)
     {
-      minDepthLevel = Convert.ToInt32(depthEachItem[&quot;Level&quot;]);
-      parentId = Convert.ToInt32(depthEachItem[&quot;ParentId&quot;]);
-      folderPath = depthEachItem.Field&amp;amp;amp;amp;amp;lt;string&amp;amp;amp;amp;amp;gt;(&quot;Name&quot;) + &quot;\\&quot; + folderPath;
+      minDepthLevel = Convert.ToInt32(depthEachItem["Level"]);
+      parentId = Convert.ToInt32(depthEachItem["ParentId"]);
+      folderPath = depthEachItem.Field<string>("Name") + "\\" + folderPath;
     }
   }while(minDepthLevel > 0);
 
-  string totalPath = inputBasePath + &quot;\\&quot; + folderPath;
+  string totalPath = inputBasePath + "\\" + folderPath;
 
   if(!Directory.Exists(totalPath)){
      Directory.CreateDirectory(totalPath);
@@ -45,7 +46,7 @@ VB.net Code
 Dim levelsList = inCollection.AsEnumerable().Select(
 Function(Item, Index) New With
 {
-.Level = Convert.ToInt32(Item(&quot;Level&quot;))
+.Level = Convert.ToInt32(Item("Level"))
 }).ToList()
 Dim maxDepth As Int32 = 0
 
@@ -55,23 +56,23 @@ For Each mxItem As Object In levelsList
     End If
 Next
 
-Dim maxDepthItems = inCollection.AsEnumerable().Where(Function(dItem) Convert.ToInt32(dItem(&quot;Level&quot;)) = maxDepth).ToList()
+Dim maxDepthItems = inCollection.AsEnumerable().Where(Function(dItem) Convert.ToInt32(dItem("Level")) = maxDepth).ToList()
 
 For Each item As DataRow In maxDepthItems
-Dim minDepthLevel As Int32 = Convert.ToInt32(item(&quot;Level&quot;))
-Dim parentId As Int32 = Convert.ToInt32(item(&quot;ParentId&quot;))
-Dim folderPath As String = item(&quot;Name&quot;)
+Dim minDepthLevel As Int32 = Convert.ToInt32(item("Level"))
+Dim parentId As Int32 = Convert.ToInt32(item("ParentId"))
+Dim folderPath As String = item("Name")
 
-Do While minDepthLevel &amp;amp;amp;amp;amp;gt; 0
-    Dim depthEachItem = inCollection.AsEnumerable().Where(Function(dItem) Convert.ToInt32(dItem(&quot;ID&quot;)) = parentId).ToList().FirstOrDefault()
+Do While minDepthLevel > 0
+    Dim depthEachItem = inCollection.AsEnumerable().Where(Function(dItem) Convert.ToInt32(dItem("ID")) = parentId).ToList().FirstOrDefault()
     If depthEachItem IsNot Nothing Then
-        minDepthLevel = Convert.ToInt32(depthEachItem(&quot;Level&quot;))
-        parentId = Convert.ToInt32(depthEachItem(&quot;ParentId&quot;))
-        folderPath = depthEachItem(&quot;Name&quot;) + &quot;\\&quot; + folderPath
+        minDepthLevel = Convert.ToInt32(depthEachItem("Level"))
+        parentId = Convert.ToInt32(depthEachItem("ParentId"))
+        folderPath = depthEachItem("Name") + "\\" + folderPath
     End If
 Loop
 
-Dim totalPath As String = baseDirPath + &quot;\\&quot; + folderPath
+Dim totalPath As String = baseDirPath + "\\" + folderPath
 
 If Directory.Exists(totalPath) = False Then
      Directory.CreateDirectory(totalPath)
@@ -79,4 +80,3 @@ End If
 
 Next
 </pre>
-Input Collection Collection Image
