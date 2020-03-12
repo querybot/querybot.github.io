@@ -15,8 +15,6 @@ plainwhite:
 markdown: kramdown
 remote_theme: thelehhman/plainwhite-jekyll
 show_excerpts: true
-highlighter: rouge
-    input: GFM
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
