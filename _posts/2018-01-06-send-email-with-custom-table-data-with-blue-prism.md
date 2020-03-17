@@ -28,6 +28,10 @@ Namespaces : System.Data, System.Collections.Generic, System.Text (Add these ite
 
 Once it is set, will jump to code.
 
+It is better to have a visual. If yes have a look at below Video
+
+{% include youtubePlayer.html id=page.youtubeId %}
+
 ```csharp
 StringBuilder sb = new StringBuilder();
 if(InData.Rows.Count > 0)
@@ -61,11 +65,6 @@ if(InData.Rows.Count > 0)
 }
 outEmailHtmlTable = sb.ToString();
 ```
-
-It is better to have a visual. If yes have a look at below mentioned Video
-
-{% include youtubePlayer.html id=page.youtubeId %}
-
 Adding color to first row with code.
 
 Code for first column coloring with Yellow.

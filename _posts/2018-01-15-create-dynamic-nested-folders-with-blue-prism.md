@@ -5,8 +5,12 @@ date: 2018-01-15 16:33
 author: Query Bot
 comments: true
 categories: [BluePrism, Code Stage]
+youtubeId: YOKFDlIdNMs
 ---
-Create dynamic Nested folders using Blue Prism tool. This blog post explains about creation of nested folders using c# as well as VB code. 
+Create dynamic Nested folders using Blue Prism tool. This blog post explains about creation of nested folders using c# as well as VB code.
+
+{% include youtubePlayer.html id=page.youtubeId %} 
+
 C# Code
 ```csharp
 var levelsList = inCollection.AsEnumerable().Select(dItem => new { 
