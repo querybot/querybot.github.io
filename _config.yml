@@ -11,6 +11,7 @@ plainwhite:
   date_format: "%b %-d, %Y"
   analytics_id: UA-155112982-1
   disqus_shortname: querybot
+  portfolio_image: "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
 
 markdown: kramdown
 highlighter: rouge
